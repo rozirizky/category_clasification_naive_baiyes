@@ -1,0 +1,15 @@
+[project]
+name = "create-dataset-ml"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "huggingface-hub>=1.1.2",
+    "nltk>=3.9.2",
+    "pandas>=2.3.3",
+    "pysastrawi>=1.2.0",
+    "pyspark>=4.0.1",
+    "python-dotenv>=1.2.1",
+    "sastrawi>=1.0.1",
+]

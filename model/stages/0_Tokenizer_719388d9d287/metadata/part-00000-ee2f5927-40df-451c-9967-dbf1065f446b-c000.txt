@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.Tokenizer","timestamp":1762886260789,"sparkVersion":"4.0.1","uid":"Tokenizer_719388d9d287","paramMap":{"inputCol":"judul","outputCol":"words"},"defaultParamMap":{"outputCol":"Tokenizer_719388d9d287__output"}}
