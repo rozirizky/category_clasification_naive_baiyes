@@ -1,26 +1,40 @@
-424975808
-424975807
-424975806
-424975805
-424975804
-424975803
-424975802
-424975801
-424975800
-424975799
+# 🧠 Klasifikasi Kategori Berita dengan Naive Bayes & PySpark
 
-https://rri.co.id/gorontalo/info-pemda/1953657/polda-gorontalo-apel-pasukan-tanggap-darurat-bencana-hidrometereologi
-https://rri.co.id/toli-toli/daerah/1953148/pramuka-tolitoli-tunjukkan-semangat-di-peran-saka-gorontalo
-https://rri.co.id/gorontalo/asta-cita/1953660/danrem-dukung-pembentukan-dan-penguatan-kmp-di-gorontalo
-https://rri.co.id/gorontalo/iptek/1952883/fppbm-gorontalo-akan-menggelar-bazar-sehat-untuk-masyarakat
-https://rri.co.id/gorontalo/pengentasan-kemiskinan/1951062/dinas-sosial-kota-gorontalo-pastikan-bansos-tepat-sasaran
-https://rri.co.id/gorontalo/daerah/1951935/gempa-m-6-2-guncang-gorontalo-warga-waspada
-https://rri.co.id/gorontalo/daerah/1951518/pengelolaan-tpa-talumelito-jadi-perhatian-pemerintah-provinsi-gorontalo
-https://rri.co.id/gorontalo/info-pemda/1953648/pkk-gorontalo-dan-dki-jakarta-jalin-kolaborasi-inspiratif
-https://rri.co.id/gorontalo/hukum/1950745/ombudsman-gorontalo-dorong-penyelesaian-kasus-pidana-di-polresta
-https://rri.co.id/gorontalo/info-pemda/1953800/rover-explore-activities-saka-pariwisata-kunjungi-dispar-gorontalo
-https://rri.co.id/gorontalo/info-pemda/1953784/gorontalo-siap-menjadi-destinasi-ramah-muslim
-https://rri.co.id/gorontalo/info-pemda/1953643/danau-perintis-jadi-kawasan-wisata-halal-gorontalo
-https://rri.co.id/gorontalo/asta-cita/1953689/korem-pemda-bahas-percepatan-pembangunan-fisik-kmp-di-gorontalo
-https://rri.co.id/sumenep/olimpik/1952123/tanding-perdana-fettum-kalahkan-atlet-gorontalo-di-popnas
-https://rri.co.id/gorontalo/daerah/1951049/kemenag-gorontalo-waspadai-pemahaman-keagamaan-menyimpang
+Proyek ini bertujuan untuk **membangun model klasifikasi teks** yang dapat mengelompokkan **judul berita** ke dalam beberapa kategori (seperti *politik, ekonomi, olahraga, kesehatan*, dll) menggunakan **algoritma Naive Bayes** dan **framework Apache Spark** untuk pemrosesan data skala besar.
+
+---
+
+## 🚀 Tujuan Proyek
+Model ini dibuat untuk:
+- Mengelompokkan berita berdasarkan *judul* secara otomatis.
+- Melatih dan menyimpan model dengan pipeline *text preprocessing* lengkap.
+- Mengunggah model hasil training ke **Hugging Face Hub** untuk pemanfaatan lebih lanjut (misalnya di aplikasi prediksi atau API NLP).
+
+---
+
+## 🧩 Arsitektur Pipeline
+
+Pipeline yang digunakan dalam proyek ini terdiri dari tahapan berikut:
+
+1. **Tokenizer** — memecah kalimat menjadi token kata.  
+2. **StopWordsRemover** — menghapus kata umum (stopwords) Bahasa Indonesia.  
+3. **Stemming (Sastrawi)** — mengubah kata ke bentuk dasarnya.  
+4. **HashingTF & IDF** — konversi teks ke representasi numerik berbasis frekuensi.  
+5. **Naive Bayes Classifier** — model klasifikasi teks probabilistik.  
+6. **Label Decoder (IndexToString)** — mengubah hasil prediksi numerik menjadi label kategori asli.
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+| Komponen | Deskripsi |
+|-----------|------------|
+| 🐍 Python | Bahasa pemrograman utama |
+| ⚡ Apache Spark (PySpark) | Framework untuk pemrosesan dan ML skala besar |
+| 📦 Sastrawi | Library stemming Bahasa Indonesia |
+| 🧠 NLTK | Stopword Bahasa Indonesia |
+| 🤗 Hugging Face Hub | Tempat penyimpanan dan berbagi model |
+| 🔐 dotenv | Mengelola environment variable & token |
+
+---
+
+## 📂 Struktur Proyek
